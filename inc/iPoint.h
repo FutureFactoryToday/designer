@@ -17,6 +17,8 @@ using dim3d = struct {
 		virtual ~iPoint2d() = default;
 
 		virtual bool Move(const dim2d& dim) = 0;
+
+		virtual dim2d read() = 0;
 	};
 
 	class iPoint3d {
@@ -24,5 +26,7 @@ using dim3d = struct {
 		virtual ~iPoint3d() = default;
 
 		virtual bool Move(const dim3d& dim) = 0;
+
+		virtual dim3d read() = 0;
 	};
 }
