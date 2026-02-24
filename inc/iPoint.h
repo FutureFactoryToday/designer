@@ -1,18 +1,28 @@
 namespace geo {
 
-using dim = double;
+using coord = double;
+
+using dim2d = struct {
+	coord x = {};
+	coord y = {};
+};
+using dim3d = struct {
+	coord x = {};
+	coord y = {};
+	coord z = {};
+};
 
 	class iPoint2d {
 	public:
 		virtual ~iPoint2d() = default;
 
-		virtual Move(dim x, dim y) = 0;
-	}
+		virtual bool Move(dim2d dim) = 0;
+	};
 
 	class iPoint3d {
 	public:
 		virtual ~iPoint3d() = default;
 
-		virtual Move(dim x, dim y, dim z) = 0;
-	}
+		virtual bool Move(dim3d dim) = 0;
+	};
 }
